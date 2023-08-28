@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState();
+  const [filteredProducts, setFilteredProducts] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

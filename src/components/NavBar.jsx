@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
+import { useSelector } from "react-redux";
+
 const NavBar = () => {
+  const cartItems = useSelector((state) => state.cart);
+
   return (
     <div>
       <nav className="navbar bg-body-tertiary">
@@ -10,7 +14,7 @@ const NavBar = () => {
             Code Gama Store
           </Link>
           <Link to="/cart" className="text-decoration-none">
-            <FaCartPlus /> <span>0</span>
+            <FaCartPlus /> <span>{cartItems.length}</span>
           </Link>
         </div>
       </nav>

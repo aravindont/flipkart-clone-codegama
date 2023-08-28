@@ -14,7 +14,8 @@ const NavBar = () => {
             Code Gama Store
           </Link>
           <Link to="/cart" className="text-decoration-none">
-            <FaCartPlus /> <span>{cartItems.length}</span>
+            <FaCartPlus style={{ fontSize: "44px" }} />{" "}
+            <span className="fs-6 ">{cartItems.length}</span>
           </Link>
         </div>
       </nav>

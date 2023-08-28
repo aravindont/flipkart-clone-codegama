@@ -4,16 +4,17 @@ import { NavLink } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(data);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
     const getProducts = async () => {
       try {
+        setLoading(true);
         const response = await fetch("https://fakestoreapi.com/products");
         const jsonData = await response.json();
         setData(jsonData);
+        setFilteredProducts(jsonData);
       } catch {
       } finally {
         setLoading(false);

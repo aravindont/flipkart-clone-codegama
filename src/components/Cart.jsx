@@ -7,7 +7,7 @@ import {
 } from "../redux/action";
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.cart); // Assuming your cart reducer is named 'handleCart'
+  const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleDecrease = (product) => {
